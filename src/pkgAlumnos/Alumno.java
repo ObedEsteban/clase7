@@ -7,10 +7,9 @@ public class Alumno {
 
     private String carnet;
     private String nombre;
-
     private String telefono;
-
     private String direccion;
+    private List<Curso> cursos;
 
     public String getCarnet() {
         return carnet;
@@ -44,24 +43,19 @@ public class Alumno {
         this.direccion = direccion;
     }
 
-    private List<Curso> cursos;
-
-
-    public Alumno (String carnet, String nombre, String telefono, String direccion){
-
-
-        this.carnet=carnet;
-        this.nombre=nombre;
-        this.telefono=telefono;
-        this.direccion=direccion;
-        this.cursos=new ArrayList<>();
+    public Alumno(String carnet, String nombre, String telefono, String direccion) {
+        this.carnet = carnet;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.cursos = new ArrayList<>();
     }
 
-    public void agregarCurso (Curso curso){
+    public void agregarCurso(Curso curso) {
         this.cursos.add(curso);
     }
 
     public List<Curso> getCursos() {
-        return cursosAsignados;
-}
+        return cursos;
+    }
 }
